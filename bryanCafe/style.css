@@ -1,0 +1,414 @@
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img.logo {
+    max-height: 60px;
+    width: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+.nav-menu li a:hover {
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+}
+
+/* Banner Styling */
+.welcome-banner {
+    background-image: url('image/chicchi.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+}
+
+/* Opening Hours Styling */
+.opening-hours {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 0.4em;
+    color: #cccccc;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+/* View Menu Button Styling */
+.view-menu-button {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    padding: 5px 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fafafa;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.view-menu-button:hover {
+    background-color: #fff;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.about-image img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Menu Section Styling */
+.section-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.menu-item-details h3 {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.menu-item-details p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.price {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Enquiry Form Styling */
+.enquiry-form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(250, 250, 250, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.enquiry-form h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.enquiry-form form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #333;
+}
+
+.enquiry-form form input,
+.enquiry-form form textarea,
+.enquiry-form form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.enquiry-form form button {
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.enquiry-form form button:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+}
+
+#form-response {
+    margin-top: 15px;
+    color: green;
+    font-size: 1em;
+}
+
+/* Branches Information Section */
+.branches-info {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px; /* Spazio tra contenitore branches e logo */
+}
+
+.branches-title {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.branches-title h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
+#branches-container {
+    flex: 2;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#branches-container p {
+    margin: 5px 0;
+}
+
+.branches-logo {
+    flex: 1;
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+.logo-right {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.logo-right:hover {
+    transform: scale(1.05);
+}
+
+
+.contact-details {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.8;
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Get Directions Button Styling */
+.get-directions-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.get-directions-button:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-item, .contact-info, .branches-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .cafe-image, .branches-logo {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .menu-items {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .welcome-banner, .welcome-banner-about {
+        padding: 60px 20px;
+    }
+
+    .menu-description, .opening-hours {
+        font-size: 0.5em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+
+    .get-directions-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .contact-details p {
+        font-size: 0.9em;
+    }
+}

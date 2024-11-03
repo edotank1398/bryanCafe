@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "menu.dtd">
+<menu>
+    <item>
+        <name>Beetroot and Feta Salad</name>
+        <description>A refreshing mix of beetroot, feta, and greens, perfect for a light meal.</description>
+        <price>$15.00</price>
+        <image>image/fetasalad.jpg</image>
+    </item>
+    <item>
+        <name>Sourdough Rye Sandwich</name>
+        <description>Organic rye sandwich with cheese, fresh vegetables, and signature sauce.</description>
+        <price>$18.00</price>
+        <image>image/sandwich.jpg</image>
+    </item>
+    <item>
+        <name>Spinach Pie and Salad</name>
+        <description>A comforting spinach pie with a side salad. Great for lunch or dinner.</description>
+        <price>$20.00</price>
+        <image>image/pie.jpeg</image>
+    </item>
+    <item>
+        <name>Feta Pancakes with Salad</name>
+        <description>Light and fluffy pancakes filled with feta cheese, served with a side salad.</description>
+        <price>$19.50</price>
+        <image>image/pancake.jpg</image>
+    </item>
+</menu>

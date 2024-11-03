@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Bryan's Café</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS principale -->
+    <style>
+        /* Stili aggiuntivi solo per la privacy policy */
+        .privacy-policy {
+            display: none; /* Nascosta inizialmente */
+            background-color: #f8f8f8;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .privacy-policy h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .privacy-policy ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .show-policy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 1em;
+            font-weight: 500;
+            margin: 20px auto;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .show-policy-button:hover {
+            background-color: #005f99;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html"><img src="logo.webp" alt="Bryan's Café Logo" class="logo"></a>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Banner della Privacy Policy con stile coerente alle altre pagine -->
+    <section class="welcome-banner">
+        <h1>Privacy Policy</h1>
+    </section>
+
+    <!-- Bottone per Mostrare la Privacy Policy -->
+    <div class="show-policy-button" onclick="togglePrivacyPolicy()">Show Privacy Policy</div>
+
+    <!-- Contenuto della Privacy Policy, inizialmente nascosto -->
+    <div class="privacy-policy" id="privacyPolicyContent">
+        <p>At Bryan's Café, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website or interact with us.</p>
+        
+        <h2>Information We Collect</h2>
+        <p>We may collect personal details, such as your name, email address, and message content when you:</p>
+        <ul>
+            <li>Contact us through the form</li>
+            <li>Subscribe to our newsletter</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Respond to inquiries</li>
+            <li>Send updates if you subscribed to our newsletter</li>
+        </ul>
+        <p>We do not share your information with third parties, except when required by law.</p>
+
+        <h2>Cookies</h2>
+        <p>Our website uses cookies to enhance your experience. You can disable cookies in your browser settings.</p>
+
+        <h2>Data Security</h2>
+        <p>We take steps to protect your personal information but cannot guarantee absolute security.</p>
+
+        <h2>Contact Us</h2>
+        <p>For any questions, contact us at:</p>
+        <ul>
+            <li>Email: Bryanscafe98@pls.bu</li>
+            <li>Phone: 0987654321</li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Bryan's Café | <a href="javascript:void(0);" onclick="togglePrivacyPolicy()">Privacy Policy</a></p>
+</footer>
+
+<script>
+    // Funzione per mostrare/nascondere la privacy policy
+    function togglePrivacyPolicy() {
+        const policyContent = document.getElementById("privacyPolicyContent");
+        if (policyContent.style.display === "none" || policyContent.style.display === "") {
+            policyContent.style.display = "block";
+            document.querySelector(".show-policy-button").innerText = "Hide Privacy Policy";
+        } else {
+            policyContent.style.display = "none";
+            document.querySelector(".show-policy-button").innerText = "Show Privacy Policy";
+        }
+    }
+</script>
+
+</body>
+</html>
