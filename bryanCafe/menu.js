@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    loadMenu();
-    loadBranches();
-    setupForm();
+    if (document.getElementById("menu-container")) {
+        loadMenu();
+    } else {
+        console.warn("menu-container element not found on this page.");
+    }
+
+    if (document.getElementById("branches-container")) {
+        loadBranches();
+    } else {
+        console.warn("branches-container element not found on this page.");
+    }
+
+    if (document.getElementById("contact-form")) {
+        setupForm();
+    } else {
+        console.warn("contact-form element not found on this page.");
+    }
 });
 
 function loadMenu() {
