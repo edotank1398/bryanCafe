@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadMenu() {
+    const menuContainer = document.getElementById("menu-container");
+    if (!menuContainer) {
+        console.error("menu-container element not found.");
+        return;
+    }
+
     fetch("menu.xml")
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
@@ -13,7 +19,6 @@ function loadMenu() {
         .then(data => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data, "application/xml");
-            const menuContainer = document.getElementById("menu-container");
             const items = xmlDoc.getElementsByTagName("item");
 
             let output = "<ul class='menu-list'>";
@@ -38,11 +43,17 @@ function loadMenu() {
         })
         .catch(error => {
             console.error("Error loading menu:", error);
-            document.getElementById("menu-container").innerHTML = "<p>Sorry, the menu could not be loaded at this time.</p>";
+            menuContainer.innerHTML = "<p>Sorry, the menu could not be loaded at this time.</p>";
         });
 }
 
 function loadBranches() {
+    const branchesContainer = document.getElementById("branches-container");
+    if (!branchesContainer) {
+        console.error("branches-container element not found.");
+        return;
+    }
+
     fetch("branches.xml")
         .then(response => {
             if (!response.ok) throw new Error("Network response was not ok");
@@ -51,7 +62,6 @@ function loadBranches() {
         .then(data => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data, "application/xml");
-            const branchesContainer = document.getElementById("branches-container");
             const branches = xmlDoc.getElementsByTagName("branch");
 
             let output = "<ul class='branches-list'>";
@@ -74,7 +84,7 @@ function loadBranches() {
         })
         .catch(error => {
             console.error("Error loading branches:", error);
-            document.getElementById("branches-container").innerHTML = "<p>Sorry, the branches information could not be loaded at this time.</p>";
+            branchesContainer.innerHTML = "<p>Sorry, the branches information could not be loaded at this time.</p>";
         });
 }
 
@@ -82,8 +92,12 @@ function setupForm() {
     const form = document.getElementById("contact-form");
     const responseMessage = document.getElementById("form-response");
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        responseMessage.style.display = "block"; // Show confirmation message
-    });
+    if (form && responseMessage) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            responseMessage.style.display = "block"; // Show confirmation message
+        });
+    } else {
+        console.error("Form or response message element not found.");
+    }
 }
