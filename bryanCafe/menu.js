@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Check and load the menu only if the container is present
     if (document.getElementById("menu-container")) {
         loadMenu();
     } else {
         console.warn("menu-container element not found on this page.");
     }
 
+    // Check and load the branches only if the container is present
     if (document.getElementById("branches-container")) {
         loadBranches();
     } else {
         console.warn("branches-container element not found on this page.");
     }
 
+    // Check and set up the contact form only if the form is present
     if (document.getElementById("contact-form")) {
         setupForm();
     } else {
