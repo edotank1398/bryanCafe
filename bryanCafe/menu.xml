@@ -1,28 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE menu SYSTEM "menu.dtd">
 <menu>
-    <item>
-        <name>Beetroot and Feta Salad</name>
-        <description>A refreshing mix of beetroot, feta, and greens, perfect for a light meal.</description>
-        <price>$15.00</price>
-        <image>image/fetasalad.jpg</image>
-    </item>
-    <item>
-        <name>Sourdough Rye Sandwich</name>
-        <description>Organic rye sandwich with cheese, fresh vegetables, and signature sauce.</description>
-        <price>$18.00</price>
-        <image>image/sandwich.jpg</image>
-    </item>
-    <item>
-        <name>Spinach Pie and Salad</name>
-        <description>A comforting spinach pie with a side salad. Great for lunch or dinner.</description>
-        <price>$20.00</price>
-        <image>image/pie.jpeg</image>
-    </item>
-    <item>
-        <name>Feta Pancakes with Salad</name>
-        <description>Light and fluffy pancakes filled with feta cheese, served with a side salad.</description>
-        <price>$19.50</price>
-        <image>image/pancake.jpg</image>
-    </item>
+    <category name="Pasti">
+        <item>
+            <name>Beetroot and Feta Salad</name>
+            <description>A refreshing mix of beetroot, feta, and greens, perfect for a light meal.</description>
+            <price>$15.00</price>
+            <image>image/fetasalad.jpg</image>
+        </item>
+        <item>
+            <name>Sourdough Rye Sandwich</name>
+            <description>Organic rye sandwich with cheese, fresh vegetables, and signature sauce.</description>
+            <price>$18.00</price>
+            <image>image/sandwich.jpg</image>
+        </item>
+        <item>
+            <name>Spinach Pie and Salad</name>
+            <description>A comforting spinach pie with a side salad. Great for lunch or dinner.</description>
+            <price>$20.00</price>
+            <image>image/pie.jpeg</image>
+        </item>
+        <item>
+            <name>Feta Pancakes with Salad</name>
+            <description>Light and fluffy pancakes filled with feta cheese, served with a side salad.</description>
+            <price>$19.50</price>
+            <image>image/pancake.jpg</image>
+        </item>
+    </category>
+
+    <category name="Bevande">
+        <item>
+            <name>Coffee and Hot Chocolate</name>
+            <description>Small: $3.50, Regular: $4.00, Large: $4.50</description>
+            <price>$3.50 - $4.50</price>
+            <image>image/flatwhite.jpg</image>
+        </item>
+        <item>
+            <name>Soda</name>
+            <description>Refreshing soda</description>
+            <price>$3.00</price>
+            <image>image/soda.jpg</image>
+        </item>
+        <item>
+            <name>Fresh Juice</name>
+            <description>Freshly squeezed juice</description>
+            <price>$6.00</price>
+            <image>image/juice.jpg</image>
+        </item>
+        <item>
+            <name>Bottled Water</name>
+            <description>Still or sparkling</description>
+            <price>$2.00</price>
+            <image>image/water.jpg</image>
+        </item>
+    </category>
 </menu>
